@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韓國旅行足跡</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">跳至主要內容</a>
+    
+    <nav role="navigation" class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">韓語學習日記</span>
+            </div>
+            <button class="nav-toggle" aria-label="開啟選單">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首頁</a></li>
+                <li><a href="travel.html"><i class="fas fa-plane"></i> 韓國旅行足跡</a></li>
+                <li><a href="resume.html"><i class="fas fa-user"></i> 關於我與履歷</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> 聯絡方式與留言板</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main id="main-content" class="container">
+        <div class="hero">
+            <h1>聯絡方式與留言板</h1>
+        </div>
+
+        <div class="travel-grid">
+            <div class="travel-card">
+                <div class="travel-card-content">
+                    <h2>直接聯絡</h2>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:41247058S@gapps.ntnu.edu.tw">41247058S@gapps.ntnu.edu.tw</a></li>
+                        <li><i class="fas fa-phone"></i> 電話: <a href="tel:0900057315">09-00057315</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="travel-card">
+                <div class="travel-card-content">
+                    <h2>社群媒體</h2>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/shin0714._.cwfn/" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Follow me on Instagram" 
+                           class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100007997940162&locale=zh_TW" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Follow me on Facebook" 
+                           class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="travel-card">
+                <div class="travel-card-content">
+                    <h2>留言表單</h2>
+                    <form action="#" method="POST" role="form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">姓名：</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email：</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">留言內容：</label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        </div>
+
+                        <button type="submit">送出留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>41247058S 資工116 賈崇新</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100007997940162&locale=zh_TW" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/shin0714._.cwfn/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
