@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的韓國學習與旅行日記</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">跳至主要內容</a>
+    
+    <nav role="navigation" class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">韓語學習日記</span>
+            </div>
+            <button class="nav-toggle" aria-label="開啟選單">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首頁</a></li>
+                <li><a href="travel.html"><i class="fas fa-plane"></i> 韓國旅行足跡</a></li>
+                <li><a href="resume.html"><i class="fas fa-user"></i> 關於我與履歷</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> 聯絡方式與留言板</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">歡迎來到我的韓國文化探索之旅</h1>
+                <p class="hero-subtitle">分享韓國旅行、語言學習與文化體驗</p>
+                <div class="hero-cta">
+                    <a href="travel.html" class="cta-button">探索韓國之旅</a>
+                    <a href="resume.html" class="cta-button secondary">了解更多</a>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <svg viewBox="0 0 300 100" class="hero-svg">
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+                        class="hero-text">Seoul</text>
+                    <path d="M50,80 C100,70 200,70 250,80" class="hero-path"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h2>網站簡介</h2>
+                    <p>由於我對韓國文化深感興趣，本網站旨在記錄我學習韓文的過程與心得，並分享我在韓國的旅行經歷。在這裡，你不僅能了解我的語言學習歷程，還能看到我在韓國旅遊的點滴。</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2>Welcome!</h2>
+                    <p>歡迎來到我的網站！在這裡，我將分享我學習韓文的故事、分享在韓國旅行的樂趣，並介紹我所喜愛的韓國文化。希望你能在這裡找到有趣的資訊，並與我一同探索韓國的多元魅力！</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2>個人簡介</h2>
+                    <p>我對韓國語言與文化充滿熱情。我的學習旅程從台灣師範大學的韓語(一)課程開始，並自學通過了TOPIK 2級。接下來，我將前往韓國Lexis Korea語言學校進一步提升韓語能力，並計劃在明年考取TOPIK 5級。</p>
+                </article>
+            </div>
+
+            <section class="highlights">
+                <h2 class="section-title">學習里程碑</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>TOPIK 2級</h3>
+                            <p>自學通過TOPIK 2級檢定</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>開始學習韓語</h3>
+                            <p>台灣師範大學韓語(一)課程</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>未來目標</h3>
+                            <p>準備TOPIK 5級檢定</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>41247058S 資工116 賈崇新</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100007997940162&locale=zh_TW" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/shin0714._.cwfn/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 導航列選單切換
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
