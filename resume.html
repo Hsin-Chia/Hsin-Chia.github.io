@@ -118,7 +118,7 @@
                             <plan>2024年12月29日至2025年2月9日，將前往韓國語言學校學習韓語。希望2025年4月達成TOPIK 5級，並申請台灣師範大學的韓國交換學生計劃。</plan>
                         </personal_info>
                         
-                        <Experience and Outlook>
+                        <ExperienceAndOutlook>
                             <item>
                                 <institution>台灣師範大學</institution>
                                 <course>韓語(一)</course>
@@ -144,7 +144,7 @@
                                 <certification>交換學生證書</certification>
                                 <period>尚無~</period>
                             </item>
-                        </Experience and Outlook>
+                        </ExperienceAndOutlook>
                         
                         <future_plans>
                             <plan>
@@ -174,9 +174,24 @@
     </footer>
 
     <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+    
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation(); 
+                this.classList.toggle('active'); 
+                navMenu.classList.toggle('active');
+            });
+    
+            document.addEventListener('click', function(e) {
+                if (navMenu.classList.contains('active') && 
+                    !navMenu.contains(e.target) && 
+                    !navToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active'); 
+                }
+            });
         });
     </script>
 </body>
