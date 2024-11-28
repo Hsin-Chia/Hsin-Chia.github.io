@@ -1,10 +1,10 @@
 /* CSS Variables */
 :root {
-    --primary-color: #4A90E2;
+    --primary-color: #2563eb;
     --primary-dark: #357ABD;
     --secondary-color: #FF5A5F;
-    --background-color: #F8F9FA;
-    --text-color: #333333;
+    --background-color: #e8eaeb;
+    --text-color: #0f172a;
     --gray-light: #F8F9FA;
     --gray-medium: #E9ECEF;
     --gray-dark: #6C757D;
@@ -16,7 +16,6 @@
     --transition: all 0.3s ease;
 }
 
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -101,7 +100,6 @@ body {
     display: none;
 }
 
-/* Hero Section */
 .hero, .resume-hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--white);
@@ -154,7 +152,6 @@ body {
     stroke-width: 2;
 }
 
-/* CTA Buttons */
 .hero-cta {
     display: flex;
     gap: 1rem;
@@ -180,7 +177,6 @@ body {
     color: var(--white);
 }
 
-/* Container & Grid Layouts */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -196,7 +192,6 @@ body {
     margin: 2rem 0;
 }
 
-/* Cards */
 .feature-card,
 .profile-card,
 .travel-card,
@@ -227,7 +222,6 @@ body {
     text-align: center;
 }
 
-/* Timeline */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -292,7 +286,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Education Table */
 .education-table {
     background: var(--white);
     border-radius: var(--border-radius);
@@ -327,7 +320,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Social Links & Icons */
 .social-icons {
     display: flex;
     gap: 20px;
@@ -363,7 +355,6 @@ body {
     background-color: #1877F2;
 }
 
-/* Footer */
 .footer {
     background: var(--white);
     padding: 2rem 0;
@@ -385,7 +376,6 @@ footer {
     text-align: left;
 }
 
-/* Utility Classes */
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
@@ -443,7 +433,111 @@ footer {
     color: var(--primary-color);
     text-decoration: none;
 }
-/* Media Queries */
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+
+.nav-toggle {
+    display: none;  
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;  
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;  
+    background: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    margin: 10px auto; 
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;  
+    width: 24px;  
+    height: 2px;  
+    background: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.hamburger::before {
+    top: -8px;  
+}
+
+
+.hamburger::after {
+    top: 8px;  
+}
+
+.nav-toggle.active .hamburger {
+    background: transparent; 
+}
+
+.nav-toggle.active .hamburger::before {
+    top: 0;  
+    transform: rotate(45deg); 
+}
+
+.nav-toggle.active .hamburger::after {
+    top: 0;  
+    transform: rotate(-45deg); 
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;  
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;  
+        top: 60px;  
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background-color: var(--gray-light);
+        color: var(--primary-color);
+    }
+
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
