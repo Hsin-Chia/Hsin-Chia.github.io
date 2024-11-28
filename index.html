@@ -111,12 +111,25 @@
             </div>
         </div>
     </footer>
-
     <script>
-        // 導航列選單切換
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+    
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation(); 
+                this.classList.toggle('active');  
+                navMenu.classList.toggle('active');
+            });
+    
+            document.addEventListener('click', function(e) {
+                if (navMenu.classList.contains('active') && 
+                    !navMenu.contains(e.target) && 
+                    !navToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active'); 
+                }
+            });
         });
     </script>
 </body>
