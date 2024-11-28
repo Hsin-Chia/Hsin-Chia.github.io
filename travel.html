@@ -37,7 +37,7 @@
         
         <div class="travel-first">
             <article class="travel-second">
-                <img src="picture/S__3833863.jpg" alt="Cafe Onion 環境照片" />
+                <img src="picture/S__3833863.jpg" alt="Cafe Onion 環境照片，漂亮的環境設計，使消費者可沉浸於咖啡廳內的氛圍當中" />
                 <div class="travel-second-content">
                     <h2>Cafe Onion</h2>
                     <p>Cafe Onion 是我在首爾旅行中的一個亮點。這家咖啡廳以其獨特的氛圍和美味的麵包著名，環境結合了現代與復古風格，讓人感到放鬆。</p>
@@ -46,7 +46,7 @@
             </article>
 
             <article class="travel-second">
-                <img src="picture/S__3833867.jpg" alt="首爾塔日景照片" />
+                <img src="picture/S__3833867.jpg" alt="首爾塔日景照片，由首爾塔最上方俯瞰整片首爾市區的風景" />
                 <div class="travel-second-content">
                     <h2>首爾塔</h2>
                     <p>來首爾一定要去的地方就是首爾塔。從塔頂可以俯瞰整個首爾，將城市的壯麗景色一覽無遺。</p>
@@ -55,7 +55,7 @@
             </article>
 
             <article class="travel-second">
-                <img src="picture/S__3833865.jpg" alt="洪川大明滑雪渡假村雪景" />
+                <img src="picture/S__3833865.jpg" alt="洪川大明滑雪渡假村雪景，充滿雪的滑雪道與許多遊客在此練習" />
                 <div class="travel-second-content">
                     <h2>洪川大明滑雪渡假村</h2>
                     <p>洪川大明滑雪渡假村是我第一次滑雪的地方，這裡的雪道適合各種級別的滑雪者，初學者也能輕鬆上手。</p>
@@ -64,7 +64,7 @@
             </article>
 
             <article class="travel-second">
-                <img src="picture/S__3833875.jpg" alt="COEX水族館水底通道" />
+                <img src="picture/S__3833875.jpg" alt="COEX水族館水底通道，於百貨公司內部的水族館，裡面有許多特殊的魚類，如鯊魚等，還有一個漂亮的水底通道，很適合參觀" />
                 <div class="travel-second-content">
                     <h2>COEX Aquarium</h2>
                     <p>COEX Aquarium 是首爾非常受歡迎的水族館之一，擁有一個特別的水底通道。走進這個通道，你可以在海洋生物的包圍下漫遊。</p>
@@ -73,7 +73,7 @@
             </article>
 
             <article class="travel-second">
-                <img src="picture/S__3833869.jpg" alt="Cube經紀公司" />
+                <img src="picture/S__3833869.jpg" alt="Cube經紀公司，追星族必去的景點，韓國女團的經紀公司與旗下的咖啡廳" />
                 <div class="travel-second-content">
                     <h2>Cube經紀公司</h2>
                     <p>身為一位追星族，我的旅行不僅是欣賞風景，還充滿了追星的元素。在首爾，我特別造訪了Cube經紀公司，這是許多偶像的起點。走進大廳，牆上滿是偶像們的照片與專輯，讓我感受到濃厚的音樂氛圍，也讓我更接近我的偶像。這次的經歷，對我來說，不僅是一次旅行，更是一次夢想的實現。</p>
@@ -82,7 +82,7 @@
             </article>
 
             <article class="travel-second">
-                <img src="picture/S__3833864.jpg" alt="街景照" />
+                <img src="picture/S__3833864.jpg" alt="街景照，冬天的陽光灑在首爾的街道上，有種台灣不曾見過的美麗風景" />
                 <div class="travel-second-content">
                     <h2>街景照</h2>
                     <p>這些街景照片是我在冬天拍的，當時街上有很多光禿禿的樹木，雪花紛飛，整個城市看起來安靜又美麗。陽光穿過雲層，照在積雪上，讓整個街道充滿了冬天的感覺。</p>
@@ -109,9 +109,25 @@
     </footer>
 
     <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+    
+
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();  
+                this.classList.toggle('active');  
+                navMenu.classList.toggle('active');
+            });
+    
+            document.addEventListener('click', function(e) {
+                if (navMenu.classList.contains('active') && 
+                    !navMenu.contains(e.target) && 
+                    !navToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
         });
     </script>
 </body>
